@@ -1,13 +1,13 @@
 #!/bin/bash
 
-f_iptables=`ps aux | grep iptables | grep -v grep | wc -l`
+f_iptables=`/sbin/service iptables status 1>/dev/null 2>&1`
 if [ $f_iptables -gt 0 ]; then
         # ipatbles is started
-        systemctl  restart iptables
-        echo "iptables restarted..."
+        systemctl  start iptables
+        echo "iptables started..."
 else
-        systemctl  start   iptables
-	echo "iptables started..."
+        systemctl  restart   iptables
+	echo "iptables restarted..."
 fi
 
 f_ntp=`ps aux | grep ntp | grep -v grep | wc -l`
