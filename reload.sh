@@ -1,7 +1,7 @@
 #!/bin/bash
 
-f_iptables=`/sbin/service iptables status 1>/dev/null 2>&1`
-if [ $f_iptables -gt 0 ]; then
+/sbin/service iptables status 1>/dev/null 2>&1
+if [ $? -nt 0 ]; then
         # ipatbles is started
         systemctl  start iptables
         echo "iptables started..."
