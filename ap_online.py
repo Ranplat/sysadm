@@ -17,11 +17,11 @@ from email.mime.base import MIMEBase
 __author__ = "cai"
 
 # db params
-host = "47.103.34.233"
-port = 13306
-database = "cloudap31"
-username = "data"
-password = "123@abcd"
+host = "xxx"
+port = xxx
+database = "xxx"
+username = "xxx"
+password = "xxx"
 
 # query params
 start_time = "2020-03-30"
